@@ -8,6 +8,7 @@ public class Libro {
     private Date fecha_de_edicion;
     private String autor;
     private int cantEjemplares;
+    private String ISBN;
 
     public Libro(String nombre, String editorial, Date fecha_de_edicion, String autor, int cantEjemplares) {
         this.nombre = nombre;
@@ -15,6 +16,9 @@ public class Libro {
         this.fecha_de_edicion = fecha_de_edicion;
         this.autor = autor;
         this.cantEjemplares = cantEjemplares;
+    }
+
+    public Libro() {
     }
 
     public String getNombre() {
@@ -56,4 +60,9 @@ public class Libro {
     public void setCantEjemplares(int cantEjemplares) {
         this.cantEjemplares = cantEjemplares;
     }
+
+    public void setISBN(String s) {
+        this.ISBN = s;
+    }
+
 }
