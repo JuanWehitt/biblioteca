@@ -22,6 +22,10 @@ public class Socio {
         listaDeLibrosSolicitados = new ArrayList<Libro>();
     }
 
+    public Socio() {
+
+    }
+
     public String getDni() {
         return dni;
     }
