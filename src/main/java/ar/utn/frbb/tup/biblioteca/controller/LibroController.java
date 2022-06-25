@@ -15,7 +15,7 @@ public class LibroController {
     LibroBusiness libroBusiness;
 
     @PostMapping(value = "/libro", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Libro crearLibro(AltaLibroDto dto){
+    public Libro crearLibro(@RequestBody AltaLibroDto dto){
         return libroBusiness.altaLibro(dto);
     }
 }

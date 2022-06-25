@@ -6,6 +6,7 @@ import ar.utn.frbb.tup.biblioteca.model.Socio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,7 +15,7 @@ public class SocioController {
     SocioBusiness socioBusiness;
 
     @PostMapping(value = "/socio", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Socio crearSocio(AltaSocioDto dto){
+    public Socio crearSocio(@RequestBody AltaSocioDto dto){
         return socioBusiness.altaSocio(dto);
     }
 }
