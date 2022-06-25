@@ -28,4 +28,9 @@ public class InMemorySocioDao implements SocioDao {
         socioList.remove(socio);
         return true;
     }
+
+    @Override
+    public List<Socio> findAll() {
+        return socioList;
+    }
 }
