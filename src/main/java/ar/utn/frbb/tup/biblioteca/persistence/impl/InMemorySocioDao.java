@@ -2,15 +2,19 @@ package ar.utn.frbb.tup.biblioteca.persistence.impl;
 
 import ar.utn.frbb.tup.biblioteca.model.Socio;
 import ar.utn.frbb.tup.biblioteca.persistence.SocioDao;
+import org.springframework.stereotype.Component;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
+@Component
 public class InMemorySocioDao implements SocioDao {
 
+    List<Socio> socioList = new ArrayList<>();
 
     @Override
     public Socio save(Socio socio) {
-        socio.setDni("12.122.222");
+        socioList.add(socio);
         return socio;
     }
 
@@ -21,6 +25,7 @@ public class InMemorySocioDao implements SocioDao {
 
     @Override
     public boolean deleteSocio(Socio socio) {
-        return false;
+        socioList.remove(socio);
+        return true;
     }
 }

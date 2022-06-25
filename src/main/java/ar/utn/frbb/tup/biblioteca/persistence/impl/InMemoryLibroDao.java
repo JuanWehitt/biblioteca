@@ -2,9 +2,10 @@ package ar.utn.frbb.tup.biblioteca.persistence.impl;
 
 import ar.utn.frbb.tup.biblioteca.model.Libro;
 import ar.utn.frbb.tup.biblioteca.persistence.LibroDao;
+import org.springframework.stereotype.Component;
 
 import java.util.Random;
-
+@Component
 public class InMemoryLibroDao implements LibroDao {
 
     private Libro libro;
