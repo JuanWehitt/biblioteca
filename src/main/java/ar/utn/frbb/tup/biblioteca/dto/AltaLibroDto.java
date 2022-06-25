@@ -15,6 +15,9 @@ public class AltaLibroDto {
             this.autor = autor;
         }
 
+        public AltaLibroDto(){
+        }
+
         public String getNombre() {
             return nombre;
         }
